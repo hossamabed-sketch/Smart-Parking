@@ -1,0 +1,44 @@
+ESP32 Smart Parking Monitor - Circuit Connections
+================================================
+
+SLOT 1:
+-------
+Ultrasonic Sensor HC-SR04:
+  - TRIG → GPIO 14
+  - ECHO → GPIO 27
+  - VCC  → 5V
+  - GND  → GND
+
+LEDs:
+  - RED LED   → GPIO 32 (with 220Ω resistor)
+  - GREEN LED → GPIO 33 (with 220Ω resistor)
+
+SLOT 2:
+-------
+Ultrasonic Sensor HC-SR04:
+  - TRIG → GPIO 25
+  - ECHO → GPIO 26
+  - VCC  → 5V
+  - GND  → GND
+
+LEDs:
+  - RED LED   → GPIO 18 (with 220Ω resistor)
+  - GREEN LED → GPIO 19 (with 220Ω resistor)
+
+SLOT 3:
+-------
+Ultrasonic Sensor HC-SR04:
+  - TRIG → GPIO 4
+  - ECHO → GPIO 5
+  - VCC  → 5V
+  - GND  → GND
+
+LEDs:
+  - RED LED   → GPIO 21 (with 220Ω resistor)
+  - GREEN LED → GPIO 22 (with 220Ω resistor)
+
+Logic:
+------
+- Distance < 10 cm  → RED LED ON (Occupied)
+- Distance >= 10 cm → GREEN LED ON (Available)
+- No reading        → Both LEDs OFF
